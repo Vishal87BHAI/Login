@@ -1,14 +1,13 @@
 import React from "react";
 import { Button, Form } from "react-bootstrap";
-import { useLocation } from "react-router-dom";
+import qs from "qs";
 
 function Login() {
-  const search = useLocation().search;
-  const id = new URLSearchParams(search).get("id");
+  const params = qs.parse(window.location.search.replace("?", ""));
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    window.open(`http://localhost:3000/registeration-info?id=${id}`, "_blank");
+    window.open(`http://localhost:3000/registeration-info?id=${params?.id}`, "_blank");
   };
 
   return (
