@@ -2,10 +2,9 @@ import React from "react";
 import { Button, Form } from "react-bootstrap";
 
 function Login() {
-
     const handleSubmit = (e) => {
         e.preventDefault();
-        window.open('http://localhost:3000/registeration-info?id=a400e227-8407-4b51-9848-0f95f3dbdbec', '_blank');
+        window.open('http://localhost:3000/registeration-info?id=a400e227-8407-4b51-9848-0f95f3dbdbec', '_parent');
     }
 
   return (
