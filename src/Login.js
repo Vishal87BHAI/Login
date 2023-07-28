@@ -2,12 +2,17 @@ import React from "react";
 import { Button, Form } from "react-bootstrap";
 
 function Login() {
+
+    const handleSubmit = () => {
+        window.open('http://localhost:3000/registeration-info', '_blank');
+    }
+
   return (
     <div
       className="d-flex justify-content-center align-items-center"
       style={{ height: "70vh" }}
     >
-      <Form>
+      <Form onSubmit={handleSubmit}>
         <h1 className="mb-5">Login Here</h1>
         <Form.Group className="mb-3" controlId="formBasicEmail">
           <Form.Label>Email address</Form.Label>
