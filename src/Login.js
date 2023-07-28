@@ -3,8 +3,9 @@ import { Button, Form } from "react-bootstrap";
 
 function Login() {
 
-    const handleSubmit = () => {
-        window.open('http://localhost:3000/registeration-info', '_blank');
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        window.location.replace('http://localhost:3000/registeration-info');
     }
 
   return (
@@ -12,7 +13,7 @@ function Login() {
       className="d-flex justify-content-center align-items-center"
       style={{ height: "70vh" }}
     >
-      <Form onSubmit={handleSubmit}>
+      <Form onSubmit={(e) => handleSubmit(e)}>
         <h1 className="mb-5">Login Here</h1>
         <Form.Group className="mb-3" controlId="formBasicEmail">
           <Form.Label>Email address</Form.Label>
